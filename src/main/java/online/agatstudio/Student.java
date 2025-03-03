@@ -1,4 +1,4 @@
-package online.agarstudio;
+package online.agatstudio;
 
 public class Student {
 
