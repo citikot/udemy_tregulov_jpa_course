@@ -1,4 +1,4 @@
-package online.agatstudio;
+package online.agatstudio.jdbc_entry;
 
 public class Student {
 
