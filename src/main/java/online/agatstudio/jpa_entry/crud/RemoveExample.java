@@ -7,7 +7,7 @@ import jakarta.persistence.Persistence;
 import online.agatstudio.jpa_entry.entity.Student;
 
 @SuppressWarnings("java:S2589")
-public class PersistExample {
+public class RemoveExample {
 
     public static void main(String[] args) {
 
@@ -20,8 +20,8 @@ public class PersistExample {
 
         try {
             transaction.begin();
-            student = new Student("Leo", "Farrell", 8.4);
-            entityManager.persist(student);
+            student = entityManager.find(Student.class, 1);
+            entityManager.remove(student);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -35,6 +35,5 @@ public class PersistExample {
             }
         }
 
-        System.out.println(student);
     }
 }
