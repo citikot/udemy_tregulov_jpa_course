@@ -20,7 +20,7 @@ public class PersistExample {
 
         try {
             transaction.begin();
-            student = new Student("Leo", "Farrell", 8.4);
+            student = new Student("Isaak", "Prescott", 9.4);
             entityManager.persist(student);
             transaction.commit();
         } catch (Exception e) {
