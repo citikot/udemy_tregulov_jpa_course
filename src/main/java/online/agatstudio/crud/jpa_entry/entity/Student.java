@@ -1,4 +1,4 @@
-package online.agatstudio.jpa_entry.entity;
+package online.agatstudio.crud.jpa_entry.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import jakarta.persistence.Transient;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "test_students")
+@Table(name = "students")
 public class Student {
 
     @Id
@@ -19,7 +19,7 @@ public class Student {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "first_name", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
     @Column(name = "surname")

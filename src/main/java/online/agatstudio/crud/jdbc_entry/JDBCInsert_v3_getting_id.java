@@ -1,4 +1,4 @@
-package online.agatstudio.jdbc_entry;
+package online.agatstudio.crud.jdbc_entry;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
