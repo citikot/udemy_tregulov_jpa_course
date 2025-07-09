@@ -1,4 +1,6 @@
-package online.agatstudio;
+package online.agatstudio.crud;
+
+import online.agatstudio.crud.jpa_entry.entity.Student;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

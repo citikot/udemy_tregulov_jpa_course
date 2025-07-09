@@ -1,4 +1,4 @@
-package online.agatstudio.crud.jdbc_entry;
+package online.agatstudio.crud.jdbc_entry.entity;
 
 public class Student {
 

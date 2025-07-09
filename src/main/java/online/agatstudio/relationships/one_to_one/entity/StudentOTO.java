@@ -1,18 +1,18 @@
 package online.agatstudio.relationships.one_to_one.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "students")
-public class Student {
+public class StudentOTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +28,14 @@ public class Student {
     @Column(name = "avg_grade", nullable = false)
     private Double avgGrade;
 
-    public Student() {
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "passport_id")
+    private Passport passport;
+
+    public StudentOTO() {
     }
 
-    public Student(String name, String surname, Double avgGrade) {
+    public StudentOTO(String name, String surname, Double avgGrade) {
         this.name = name;
         this.surname = surname;
         this.avgGrade = avgGrade;
@@ -67,6 +71,14 @@ public class Student {
 
     public void setAvgGrade(Double avgGrade) {
         this.avgGrade = avgGrade;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
     }
 
     @Override

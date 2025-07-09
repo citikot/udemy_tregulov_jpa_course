@@ -1,5 +1,7 @@
 package online.agatstudio.crud.jdbc_entry;
 
+import online.agatstudio.crud.jdbc_entry.entity.Student;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
