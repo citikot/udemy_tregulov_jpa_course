@@ -4,8 +4,10 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import online.agatstudio.relationships.one_to_one.entity.Passport;
+import online.agatstudio.relationships.one_to_one.entity.StudentOTO;
 
-public class OneToOneUni {
+public class EnumEx {
 
     public static void main(String[] args) {
 
@@ -17,20 +19,16 @@ public class OneToOneUni {
         try {
             transaction.begin();
 
-            // PERSIST
 //            StudentOTO student1 = new StudentOTO("Serena", "Nilsen", 6.4);
-//            Passport passport1 = new Passport("serena@email", 168, "brown");
+//            Passport passport1 = new Passport("serena@email", 168, EyeColor.GREEN);
 //            student1.setPassport(passport1);
-//            entityManager.persist(passport1);
+//
 //            entityManager.persist(student1);
 
-            // FIND
-
-//            StudentOTO student2 = entityManager.find(StudentOTO.class, 3);
-//            System.out.println(student2);
-//            System.out.println(student2.getPassport());
+            StudentOTO student2 = entityManager.find(StudentOTO.class, 1);
 
             transaction.commit();
+            System.out.println(student2.getPassport());
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
@@ -42,6 +40,7 @@ public class OneToOneUni {
                 factory.close();
             }
         }
+
+
     }
 }
-
