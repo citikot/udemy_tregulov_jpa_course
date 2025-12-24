@@ -7,11 +7,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "students")
+@Getter
+@Setter
 public class Student {
 
     @Id
@@ -39,38 +43,6 @@ public class Student {
         this.surname = surname;
         this.avgGrade = avgGrade;
         this.createdDate = LocalDateTime.now();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public Double getAvgGrade() {
-        return avgGrade;
-    }
-
-    public void setAvgGrade(Double avgGrade) {
-        this.avgGrade = avgGrade;
     }
 
     public LocalDateTime getCreatedDate() {

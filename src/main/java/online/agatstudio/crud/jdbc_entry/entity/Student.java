@@ -1,5 +1,10 @@
 package online.agatstudio.crud.jdbc_entry.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Student {
 
     private Long id;
@@ -13,38 +18,6 @@ public class Student {
     public Student(String name, String surname, Double avgGrade) {
         this.name = name;
         this.surname = surname;
-        this.avgGrade = avgGrade;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public Double getAvgGrade() {
-        return avgGrade;
-    }
-
-    public void setAvgGrade(Double avgGrade) {
         this.avgGrade = avgGrade;
     }
 

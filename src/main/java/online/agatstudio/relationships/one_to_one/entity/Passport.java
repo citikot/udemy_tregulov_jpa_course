@@ -10,10 +10,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 import online.agatstudio.relationships.one_to_one.EyeColor;
 
 @Entity
 @Table(name = "passports")
+@Getter
+@Setter
 public class Passport {
 
     @Id
@@ -40,38 +44,6 @@ public class Passport {
     public Passport(String email, int height, EyeColor eyeColor) {
         this.email = email;
         this.height = height;
-        this.eyeColor = eyeColor;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public EyeColor getEyeColor() {
-        return eyeColor;
-    }
-
-    public void setEyeColor(EyeColor eyeColor) {
         this.eyeColor = eyeColor;
     }
 

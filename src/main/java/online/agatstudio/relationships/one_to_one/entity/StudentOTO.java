@@ -9,9 +9,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "students")
+@Getter
+@Setter
 public class StudentOTO {
 
     @Id
@@ -39,46 +43,6 @@ public class StudentOTO {
         this.name = name;
         this.surname = surname;
         this.avgGrade = avgGrade;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public Double getAvgGrade() {
-        return avgGrade;
-    }
-
-    public void setAvgGrade(Double avgGrade) {
-        this.avgGrade = avgGrade;
-    }
-
-    public Passport getPassport() {
-        return passport;
-    }
-
-    public void setPassport(Passport passport) {
-        this.passport = passport;
     }
 
     @Override
