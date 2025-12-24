@@ -15,5 +15,3 @@ CREATE TABLE test_db.students (
   PRIMARY KEY (id),
   FOREIGN KEY (passport_id) REFERENCES test_db.passports(id)
 );
-
-SELECT * FROM students;

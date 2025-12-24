@@ -1,0 +1,18 @@
+insert into test_db.universities (name, founding_date)
+values
+    ('Harvard','1636-10-28'),
+    ('MIT','1861-04-10'),
+    ('Cambridge','1209-01-01'),
+    ('Oxford','1200-09-01')
+;
+
+insert into test_db.students (name, surname, avg_grade, university_id)
+values
+    ('Chanel','King', 9.1, 1),
+    ('Leo','Farrell', 8.4, 1),
+    ('Julia','Dean', 8.7, 1),
+    ('Serena','Nielsen', 7.2, 2),
+    ('Isaac','Sharp', 9.8, 2),
+    ('Frankie','Perry', 5.8, 3),
+    ('Roy','Harper', 7.9, null)
+;

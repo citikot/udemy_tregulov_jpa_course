@@ -1,0 +1,10 @@
+insert into test_db.students (name, surname, avg_grade)
+values
+('Chanel','King', 9.1),
+('Leo','Farrell', 8.4),
+('Julia','Dean', 8.7),
+('Serena','Nielsen', 7.2),
+('Isaac','Sharp', 9.8),
+('Frankie','Perry', 5.8),
+('Roy','Harper', 7.9)
+;

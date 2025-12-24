@@ -11,9 +11,19 @@
             <property name="jakarta.persistence.jdbc.user"   value="jpauser" />
             <property name="jakarta.persistence.jdbc.password" value="jpapwd" />
 
-            <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQLDialect" />
+<!--            <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQLDialect" />-->
             <property name="hibernate.show_sql"   value="true" />
             <property name="hibernate.format_sql" value="true" />
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <property name="hibernate.cache.region.factory_class"
+                      value="org.hibernate.cache.jcache.JCacheRegionFactory"/>
+            <property name="javax.cache.provider"
+                      value="org.ehcache.jsr107.EhcacheCachingProvider"/>
+            <property name="javax.persistence.sharedCache.mode"
+                      value="ENABLE_SELECTIVE"/>
+
         </properties>
     </persistence-unit>
 </persistence>
